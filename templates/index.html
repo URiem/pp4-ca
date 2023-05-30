@@ -2,40 +2,49 @@
 {% load static %}
 {% block content %}
 
-<!--   Icon Section   -->
 <div class="row">
-    <div class="col s12 m4">
-        <div class="icon-block">
-            <h2 class="center brown-text"><i class="material-icons">flash_on</i></h2>
-            <h5 class="center">Speeds up development</h5>
-
-            <p class="light">We did most of the heavy lifting for you to provide a default stylings that incorporate our
-                custom components. Additionally, we refined animations and transitions to provide a smoother experience
-                for developers.</p>
+    <!--   Travel Log Section   -->
+    <!-- <div class="col s12 m6 l4"> -->
+    <!-- <div class="row"> -->
+    {% for log in logentry_list %}
+    <div class="col s12 m6 l4">
+        <div class="card">
+            <div class="card-image">
+                {% if "placeholder" in travellog.featured_image.url %}
+                <img src="{% static 'media/images/mountcook.jpg' %}">
+                {% else %}
+                <img src="{{ log.featured_image.url }}">
+                {% endif %}
+                <a class="btn-floating halfway-fab waves-effect waves-light red"><i class="material-icons">add</i></a>
+            </div>
+            <div class="card-content">
+                <span class="card-title">{{ log.title }}</span>
+                <p>{{ log.excerpt }}</p>
+            </div>
         </div>
     </div>
-
-    <div class="col s12 m4">
-        <div class="icon-block">
-            <h2 class="center brown-text"><i class="material-icons">group</i></h2>
-            <h5 class="center">User Experience Focused</h5>
-
-            <p class="light">By utilizing elements and principles of Material Design, we were able to create a framework
-                that incorporates components and animations that provide more feedback to users. Additionally, a single
-                underlying responsive system across all platforms allow for a more unified user experience.</p>
-        </div>
-    </div>
-
-    <div class="col s12 m4">
-        <div class="icon-block">
-            <h2 class="center brown-text"><i class="material-icons">settings</i></h2>
-            <h5 class="center">Easy to work with</h5>
-
-            <p class="light">We have provided detailed documentation as well as specific code examples to help new users
-                get started. We are also always open to feedback and can answer any questions a user may have about
-                Materialize.</p>
-        </div>
-    </div>
+    {% if forloop.counter|divisibleby:3 %}
 </div>
+<div class="row">
+    {% endif %}
+    {% endfor %}
+
+
+    <!-- {% if is_paginated %}
+    <nav aria-label="Page navigation">
+        <ul class="pagination">
+            {% if page_obj.has_previous %}
+            <li><a href="?page={{ page_obj.previous_page_number }}">&laquo; PREV </a></li>
+            {% endif %}
+            {% if page_obj.has_next %}
+            <li><a href="?page={{ page_obj.next_page_number }}"> NEXT &raquo;</a></li>
+
+            {% endif %}
+        </ul>
+        
+    </nav>
+    {% endif %} -->
+</div>
+
 
 {% endblock %}
