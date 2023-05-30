@@ -23,10 +23,10 @@
                 <li><a href="{% url 'home' %}">Home</a></li>
                 <li><a href="#">About</a></li>
                 {% if user.is_authenticated %}
-                <li><a href="#">Logout</a></li>
+                <li><a href="{% url 'account_logout' %}">Logout</a></li>
                 {% else %}
-                <li><a href="#">Register</a></li>
-                <li><a href="#">Login</a></li>
+                <li><a href="{% url 'account_signup' %}">Sign Up</a></li>
+                <li><a href="{% url 'account_login' %}">Login</a></li>
                 {% endif %}
             </ul>
 
@@ -34,10 +34,10 @@
                 <li><a href="{% url 'home' %}">Home</a></li>
                 <li><a href="#">About</a></li>
                 {% if user.is_authenticated %}
-                <li><a href="#">Logout</a></li>
+                <li><a href="{% url 'account_logout' %}">Logout</a></li>
                 {% else %}
-                <li><a href="#">Register</a></li>
-                <li><a href="#">Login</a></li>
+                <li><a href="{% url 'account_signup' %}">Sign Up</a></li>
+                <li><a href="{% url 'account_login' %}">Login</a></li>
                 {% endif %}
             </ul>
             <a href="#" data-target="nav-mobile" class="sidenav-trigger"><i class="material-icons">menu</i></a>
@@ -54,7 +54,7 @@
                     </h5>
                 </div>
                 <div class="row center">
-                    <a href="http://materializecss.com/getting-started.html" id="download-button"
+                    <a href="{% url 'account_login' %}" id="download-button"
                         class="btn-large waves-effect waves-light teal lighten-1">Get Started</a>
                 </div>
                 <br><br>
