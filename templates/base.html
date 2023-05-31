@@ -44,38 +44,10 @@
         </div>
     </nav>
 
-    <div id="index-banner" class="parallax-container">
-        <div class="section no-pad-bot">
-            <div class="container">
-                <br><br>
-                <h1 class="header center teal-text text-lighten-2">Worldtravel Log</h1>
-                <div class="row center">
-                    <h5 class="header col s12 light">Document where you have been and where you are going!
-                    </h5>
-                </div>
-                <div class="row center">
-                    <a href="{% url 'account_login' %}" id="download-button"
-                        class="btn-large waves-effect waves-light teal lighten-1">Get Started</a>
-                </div>
-                <br><br>
-
-            </div>
-        </div>
-        <div class="parallax"><img src="{% static 'media/images/goldengate.jpg' %}" alt="Unsplashed background img 1">
-        </div>
-    </div>
-
-
-    <div class="container">
-        <div class="section">
-
-            <!--   Block content   -->
-            {% block content %}
-            <!-- Content Goes here -->
-            {% endblock content %}
-
-        </div>
-    </div>
+    <!--   Block content   -->
+    {% block content %}
+    <!-- Content Goes here -->
+    {% endblock content %}
 
 
     <div class="parallax-container valign-wrapper">
