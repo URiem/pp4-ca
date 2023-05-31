@@ -18,7 +18,8 @@
     <!--  Navigation  -->
     <nav class="white" role="navigation">
         <div class="nav-wrapper container">
-            <a id="logo-container" href="#" class="brand-logo">Logo</a>
+            <a id="logo-container" href="{% url 'home' %}" class="brand-logo"><img
+                    src="{% static 'media/images/pngegg.png' %}" alt="Unsplashed background img 2"></a>
             <ul class="right hide-on-med-and-down">
                 <li><a href="{% url 'home' %}">Home</a></li>
                 <li><a href="#">About</a></li>
@@ -89,7 +90,7 @@
         <div class="section no-pad-bot">
             <div class="container">
                 <div class="row center">
-                    <h5 class="header col s12 light">A modern responsive front-end framework based on Material Design
+                    <h5 class="header col s12 light">The world is at your door step! Go out and have a blast!!
                     </h5>
                 </div>
             </div>
@@ -102,29 +103,27 @@
         <div class="container">
             <div class="row">
                 <div class="col l6 s12">
-                    <h5 class="white-text">Company Bio</h5>
-                    <p class="grey-text text-lighten-4">We are a team of college students working on this project like
-                        it's our full time job. Any amount would help support and continue development on this project
-                        and is greatly appreciated.</p>
+                    <h5 class="white-text">We like to share!</h5>
+                    <p class="grey-text text-lighten-4">The world is a big place! There is so much to see, so much to
+                        learn, so many people to meet! Share your travel experiences with others, or track them
+                        privately and revisit your jouneys wherever and whenever you feel like it!</p>
 
 
                 </div>
                 <div class="col l3 s12">
-                    <h5 class="white-text">Settings</h5>
-                    <ul>
-                        <li><a class="white-text" href="#!">Link 1</a></li>
-                        <li><a class="white-text" href="#!">Link 2</a></li>
-                        <li><a class="white-text" href="#!">Link 3</a></li>
-                        <li><a class="white-text" href="#!">Link 4</a></li>
-                    </ul>
+
                 </div>
-                <div class="col l3 s12">
+                <div class="col l3 s12 center-align">
                     <h5 class="white-text">Connect</h5>
                     <ul>
-                        <li><a class="white-text" href="#!">Link 1</a></li>
-                        <li><a class="white-text" href="#!">Link 2</a></li>
-                        <li><a class="white-text" href="#!">Link 3</a></li>
-                        <li><a class="white-text" href="#!">Link 4</a></li>
+                        <li><a class="white-text" target="_blank"
+                                href="https://www.linkedin.com/in/ulrike-r-8b538385/"><i
+                                    class="fa-brands fa-linkedin"></i></a></li>
+                        <li><a class="white-text" target="_blank" href="https://github.com/URiem"><i
+                                    class="fa-brands fa-square-github"></i></a></li>
+                        <li><a class="white-text" target="_blank" href="https://unsplash.com/@urdonohue"><i
+                                    class="fa-brands fa-unsplash"></i></i></a>
+                        </li>
                     </ul>
                 </div>
             </div>
@@ -138,6 +137,7 @@
 
 
     <!--  Scripts-->
+    <script src="https://kit.fontawesome.com/3e15c9c764.js" crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
     <script src="{% static 'js/materialize.js' %}"></script>
     <script src="{% static 'js/init.js' %}"></script>

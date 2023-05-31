@@ -6,6 +6,14 @@
  * Made By MaterializeCSS.com
  */
 
+nav img {
+    height: 40px;
+    margin-top: 12px;
+}
+
+footer li {
+    font-size: 30px;
+}
 
 label {
     color: black;
