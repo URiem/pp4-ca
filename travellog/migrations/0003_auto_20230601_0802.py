@@ -14,7 +14,8 @@ class Migration(migrations.Migration):
         migrations.CreateModel(
             name='Country',
             fields=[
-                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
+                ('id', models.BigAutoField(auto_created=True,
+                 primary_key=True, serialize=False, verbose_name='ID')),
                 ('title', models.CharField(max_length=200)),
                 ('uniqueId', models.CharField(blank=True, max_length=100, null=True)),
                 ('slug', models.SlugField(max_length=500, unique=True)),
@@ -44,7 +45,8 @@ class Migration(migrations.Migration):
         migrations.AddField(
             model_name='logentry',
             name='privacy',
-            field=models.IntegerField(choices=[(0, 'Privat'), (1, 'Public')], default=0),
+            field=models.IntegerField(
+                choices=[(0, 'Privat'), (1, 'Public')], default=0),
         ),
         migrations.AddField(
             model_name='logentry',
@@ -69,6 +71,7 @@ class Migration(migrations.Migration):
         migrations.AddField(
             model_name='logentry',
             name='country',
-            field=models.ForeignKey(default='Planet Earth', on_delete=django.db.models.deletion.CASCADE, to='travellog.country'),
+            field=models.ForeignKey(
+                on_delete=django.db.models.deletion.CASCADE, to='travellog.country'),
         ),
     ]
