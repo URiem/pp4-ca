@@ -13,6 +13,6 @@ from .models import Logentry
 
 class LogentryList(generic.ListView):
     model = Logentry
-    queryset = Logentry.objects.filter(status=1).order_by("-created_on")
+    queryset = Logentry.objects.filter(status=1).order_by("-year")
     template_name = "index.html"
     paginate_by = 6
