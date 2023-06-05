@@ -7,4 +7,9 @@ assignees: ''
 
 ---
 
-Edit README file to include: <content>
+Edit README file to include: 
+
+**Tasks:**
+- [ ] <content>
+- [ ] <content>
+- [ ] <content>
